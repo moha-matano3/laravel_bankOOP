@@ -57,10 +57,10 @@ Route::get('/logout', [AuthController::class, 'logout'] );
 
 //Route::group(['middleware' => ['auth']], function(){
 //Route::get('/dashboard', [DashboardController::class, 'home'])->name('dashboard');
-//Route::get('/dashboard/profile', [DashboardController::class, 'profile'])->name('dashboard.profile');
+Route::get('/dashboard/profile', [DashController::class, 'profile'])->name('dashboard.profile');
 //Route::patch('/profile/update', [DashboardController::class, 'update_profile'])->name('profile.update');
-//Route::get('/dashboard/loan', [DashboardController::class, 'loan'])->name('dashboard.loan');
-//Route::post('/apply/loan', [DashboardController::class, 'apply_loan'])->name('apply.loan');
-//Route::delete('/delete/loan/{loan}', [DashboardController::class, 'delete_loan'])->name('delete.loan');
-//Route::patch('/edit/loan/{loan}', [DashboardController::class, 'edit_loan'])->name('edit.loan');
+Route::get('/dashboard/loan', [DashController::class, 'loan'])->name('dashboard.loan');
+Route::post('/apply/loan', [DashController::class, 'apply_loan'])->name('apply.loan');
+Route::delete('/delete/loan/{loan}', [DashController::class, 'delete_loan'])->name('delete.loan');
+Route::patch('/edit/loan/{loan}', [DashController::class, 'edit_loan'])->name('edit.loan');
 //});

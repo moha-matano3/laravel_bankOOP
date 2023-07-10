@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Loan;
 use App\Models\Role;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -46,6 +47,10 @@ class User extends Authenticatable
 
 
     public function roles(){
-        return $this->belongsToMany(Role::class)
+        return $this->belongsToMany(Role::class);
+    }
+
+    public function loans(){
+        return $this->hasMany(Loan::class);
     }
 }

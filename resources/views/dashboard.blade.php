@@ -65,7 +65,7 @@
             <nav>
                 <ul>
                     <li><a href="{{route('dashboard.profile')}}">Profile</a></li>
-                    <li><a href="">Apply Loan</a></li>
+                    <li><a href="{{route('dashboard.loan')}}">Apply Loan</a></li>
                     <li><a href="">Reports</a></li>
                     <li><a href="">Statements</a></li>
                     <li><a href="/logout">Logout</a></li>
